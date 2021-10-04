@@ -1,6 +1,6 @@
 # seed-keycloak-golang
 
-This seed it's about how to implement a keycloak(kk) authentication using docker-compose and golang to provide a simple way to call the kk API. We will understand how Openid protocol works with kk, how to select other themes, etc.
+This seed it's about how to implement a keycloak(kk) authentication using docker-compose and golang to provide a simple way to call the kk API. We will understand how Openid and OAuth 2 protocol works with kk, how to select other themes, etc.
 
 ## What you need?
 
@@ -19,3 +19,13 @@ This file contains the keycloak image that we will use.
 ## Docker-compose file
 
 This file contains the kk service builded from Dockerfile and a mysql service, you will find the user and password inside docker-compose file.
+
+## OAuth 2
+
+Authorization flow elements.
+
+* Resource Owner
+* Client
+* Resource Server
+* Authorization Server
+

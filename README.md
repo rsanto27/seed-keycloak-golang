@@ -30,3 +30,15 @@ Authorization flow elements.
 * Authorization Server
 
 ![Oauth 2 flow](https://user-images.githubusercontent.com/2284988/137121016-de010419-f7d2-4ade-9c48-a65afbff3078.png)
+
+## Inside admin
+
+### Realm
+
+Realm is a way to separate the context, by default we have the master realm, this realm has the objective to manage the keycloak.
+To create a new realm, go to "add realm" below the master realm, give a name and that's it.
+
+### User
+
+To add or manage a user go to "users". 
+

@@ -29,3 +29,4 @@ Authorization flow elements.
 * Resource Server
 * Authorization Server
 
+![Oauth 2 flow](https://user-images.githubusercontent.com/2284988/137121016-de010419-f7d2-4ade-9c48-a65afbff3078.png)

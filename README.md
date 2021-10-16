@@ -31,14 +31,19 @@ Authorization flow elements.
 
 ![Oauth 2 flow](https://user-images.githubusercontent.com/2284988/137121016-de010419-f7d2-4ade-9c48-a65afbff3078.png)
 
-## Inside admin
+## Inside Admin
 
-### Realm
+### Realms
 
 Realm is a way to separate the context, by default we have the master realm, this realm has the objective to manage the keycloak.
 To create a new realm, go to "add realm" below the master realm, give a name and that's it.
 
-### User
+### Users
 
 To add or manage a user go to "users". 
+
+### Clients
+
+when you have an app, and this app needs to make the authentication flow, then you will need a client. To manage the clients you will need to have a realm selected, go to "clients" option. A simple way to demonstrate de operation is create a new client,  let the openid-content selected and give a Root URL. This URL is a login url that your app will have. To show the flow we will use a SPA example came from keycloak "https://www.keycloak.org/app/".
+
 

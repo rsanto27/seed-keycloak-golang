@@ -46,4 +46,10 @@ To add or manage a user go to "users".
 
 when you have an app, and this app needs to make the authentication flow, then you will need a client. To manage the clients you will need to have a realm selected, go to "clients" option. A simple way to demonstrate de operation is create a new client,  let the openid-content selected and give a Root URL. This URL is a login url that your app will have. To show the flow we will use a SPA example came from keycloak "https://www.keycloak.org/app/".
 
+Created the client, go to "https://www.keycloak.org/app/". There you will find the page asking you the Realm and the Client that you created before, save and will be redirect to Sign in.
+
+Go ahead and make the login using the user created before.
+
+
+
 

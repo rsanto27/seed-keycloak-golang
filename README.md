@@ -50,6 +50,10 @@ Created the client, go to "https://www.keycloak.org/app/". There you will find t
 
 Go ahead and make the login using the user created before.
 
+## GoClient
+
+Inside goClient path, you will see a small code written in goLang, this code will simulate the same flow on "clients" topic. To do it, change the "Access Type" inside your client to "Confidential" and get the secret in "credentials" tab. After it, you should change the root url, admin url and web Origins to "http://localhost:8081" because we will handle a server to do it, the valid redirect uris wil receive "http://localhost:8081*".
+
 
 
 

@@ -56,6 +56,18 @@ Inside goClient path, you will see a small code written in goLang, this code wil
 
 Execute in terminal the command "go mod init goclient". After it, you will find the files go.mod and go.sum in the source path. This files is marked like ignored inside .gitignore. To run the client, task "go run main.go".
 
+### Flow request
+1 - Task "http://loalhost:8081". Here you will be redirect to login page, hosted by keycloak. Make the login flow with your user and pass.
+2 - The callback redirect will throw you to "/auth/callback" showing the access token.
+
+### Access token
+
+Get the access token and put inside "jwt.io", then you will see the decode access token like this.
+![image](https://user-images.githubusercontent.com/2284988/138468675-a34b5ea7-66be-4166-9906-f2194a75d718.png)
+
+
+
+
 
 
 

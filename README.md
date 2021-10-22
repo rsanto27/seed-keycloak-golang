@@ -54,6 +54,23 @@ Go ahead and make the login using the user created before.
 
 Inside goClient path, you will see a small code written in goLang, this code will simulate the same flow on "clients" topic. To do it, change the "Access Type" inside your client to "Confidential" and get the secret in "credentials" tab. After it, you should change the root url, admin url and web Origins to "http://localhost:8081" because we will handle a server to do it, the valid redirect uris wil receive "http://localhost:8081*".
 
+Execute in terminal the command "go mod init goclient". After it, you will find the files go.mod and go.sum in the source path. This files is marked like ignored inside .gitignore. To run the client, task "go run main.go".
+
+### Flow request
+1 - Task "http://loalhost:8081". Here you will be redirect to login page, hosted by keycloak. Make the login flow with your user and pass.
+
+2 - The callback redirect will throw you to "/auth/callback" showing the access token.
+
+### Access token
+
+Get the access token and put inside "jwt.io", then you will see the decode access token like this.
+![image](https://user-images.githubusercontent.com/2284988/138468675-a34b5ea7-66be-4166-9906-f2194a75d718.png)
+
+Remember that, at this point, we are authorized because we received the access token, and now we want be authenticated to get the user roles and so on. To do it make sure you have the  "openid" role inside your scope and the next step will be get the idToken
+
+
+
+
 
 
 

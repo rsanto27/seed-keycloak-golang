@@ -43,16 +43,26 @@ func main() {
 			return
 		}
 
-		token, err := config.Exchange(ctx, request.URL.Query().Get("code"))
+		// Get the access token
+		accessToken, err := config.Exchange(ctx, request.URL.Query().Get("code"))
 		if err != nil {
 			http.Error(writer, "failed when exchanged the token", http.StatusInternalServerError)
 			return
 		}
 
+		// Get the IDToken
+		idToken, ok := accessToken.Extra("id_token").(string)
+		if !ok {
+			http.Error(writer, "failed when get IDToken", http.StatusInternalServerError)
+			return
+		}
+
 		resp := struct {
 			AccessToken *oauth2.Token
+			IDToken     string
 		}{
-			token,
+			accessToken,
+			idToken,
 		}
 
 		data, err := json.Marshal(resp)

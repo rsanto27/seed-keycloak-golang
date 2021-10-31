@@ -66,7 +66,13 @@ Execute in terminal the command "go mod init goclient". After it, you will find 
 Get the access token and put inside "jwt.io", then you will see the decode access token like this.
 ![image](https://user-images.githubusercontent.com/2284988/138468675-a34b5ea7-66be-4166-9906-f2194a75d718.png)
 
-Remember that, at this point, we are authorized because we received the access token, and now we want be authenticated to get the user roles and so on. To do it make sure you have the  "openid" role inside your scope and the next step will be get the idToken
+Remember that, at this point, we are authorized because we received the access token, and now we want be authenticated to get the user roles and so on. To do it make sure you have the  "openid" role inside your scope and the next step will be get the idToken.
+
+### IDToken
+
+After you get the access token, you may request the IDToken with this call ``idToken, ok := accessToken.Extra("id_token").(string)``. Get the callback again and put the IDToken inside jwt.io to see the decoded IDToken.
+![image](https://user-images.githubusercontent.com/2284988/139604189-e7c69d49-db23-44c9-bc15-955cbc6e0375.png)
+
 
 
 

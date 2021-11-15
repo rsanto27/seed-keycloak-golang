@@ -73,6 +73,17 @@ Remember that, at this point, we are authorized because we received the access t
 After you get the access token, you may request the IDToken with this call ``idToken, ok := accessToken.Extra("id_token").(string)``. Get the callback again and put the IDToken inside jwt.io to see the decoded IDToken.
 ![image](https://user-images.githubusercontent.com/2284988/139604189-e7c69d49-db23-44c9-bc15-955cbc6e0375.png)
 
+### Mapping user attributes
+
+1 - Select a user and go to attributes.
+2 - Set an attribute like a level by example and dont forget to set the value too, save the attribute.
+3 - Go to client scopes menu and create one with level name.
+4 - After created, go to mappers and map the level inside name, User attribute and token Claim Name. The mapper type must be User Attribute kind.
+5 - Go to clients menu, select your client, go to client Scopes and the Level scope will be there to be selected, select him and the attribut e must be inside your idToken when you decode him inside jwt.io
+![image](https://user-images.githubusercontent.com/2284988/141847933-aaf15006-29ff-471d-834d-209e851f9869.png)
+
+
+
 
 
 
